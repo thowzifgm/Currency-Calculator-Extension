@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Informatics_Currencyconverter admin configuration override import currey rate
+ *
+ * Informatics
+ * Informatics Currencyconverter
+ *
+ * @category   Informatics
+ * @package    Informatics_Currencyconverter
+ * @copyright  Copyright © 2017-2018
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- custom currency converter in the currency rate import method -->
+    <type name="Magento\Directory\Model\Currency\Import\Config">
+        <arguments>
+            <argument name="servicesConfig" xsi:type="array">
+                <item name="fcc" xsi:type="array">
+                    <item name="label" xsi:type="string">Informatics Currency Converter</item>
+                    <item name="class" xsi:type="string">Informatics\Currencyconverter\Model\Currency\Import\Fcc</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>
